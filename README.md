@@ -8,10 +8,10 @@ It pretty much need improvement but I lack the free hours to do so.
 
 It has four tabs:
 
-1.Cards
-1.Arenas
-1.Chests
-1.Related Videos (Youtube API)
+1. Cards
+1. Arenas
+1. Chests
+1. Related Videos (Youtube API)
 
 ## Credits
 
