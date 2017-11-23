@@ -1,0 +1,95 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>ClashDB</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-padding>
+
+  <ion-card *ngIf="card">
+    <ion-card-content>
+
+      <ion-thumbnail>
+        <img src="http://www.clashapi.xyz/images/cards/{{card.idName}}.png" alt="{{card.name}}">
+      </ion-thumbnail>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6 text-left>
+            <p>Nome</p>
+            <p>Tipo</p>
+            <p>Raridade</p>
+            <p>Elixir</p>
+            <p>Arena</p>
+          </ion-col>
+
+          <ion-col col-6 text-right>
+            <p>{{ card.name }}</p>
+            <p>{{ card.type }}</p>
+            <p>{{ card.rarity }}</p>
+            <p>{{ card.elixirCost }}</p>
+            <p>{{ card.arena }}</p>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col col-12 text-justify>
+            <hr>
+            <p>{{ card.description }}</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="card">
+    <ion-card-header>
+      Pode ser obtida nos baús
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col col-3>
+            <img class="fix-padding" src="http://www.clashapi.xyz/images/chests/silver-chest.png" alt="Silver Chest">
+          </ion-col>
+
+          <ion-col col-3>
+            <img class="fix-padding" src="http://www.clashapi.xyz/images/chests/golden-chest.png" alt="Golden Chest">
+          </ion-col>
+
+          <ion-col col-3>
+            <img class="fix-padding" src="http://www.clashapi.xyz/images/chests/crown-chest.png" alt="Crown Chest">
+          </ion-col>
+
+          <ion-col col-3>
+            <img class="fix-padding" src="http://www.clashapi.xyz/images/chests/giant-chest.png" alt="Giant Chest">
+          </ion-col>
+
+          <ion-col col-3>
+            <img class="fix-padding" src="http://www.clashapi.xyz/images/chests/magical-chest.png" alt="Magical Chest">
+          </ion-col>
+
+          <ion-col col-3>
+            <img class="fix-padding" src="http://www.clashapi.xyz/images/chests/super-magical-chest.png" alt="Super Magical Chest">
+          </ion-col>
+
+          <ion-col col-3>
+            <img *ngIf="card.rarity === 'Epic'" class="fix-padding" src="http://www.clashapi.xyz/images/chests/epic-chest.png" alt="Epic Chest">
+          </ion-col>
+
+          <ion-col col-3>
+            <img *ngIf="card.rarity === 'Legendary'" class="fix-padding" src="http://www.clashapi.xyz/images/chests/legendary-chest.png" alt="Legendary Chest">
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>ClashDB</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-padding>
+  <ion-list no-lines>
+    <ion-list-header text-center>
+      Arenas
+    </ion-list-header>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12 *ngFor="let arena of arenas">
+
+          <ion-card (click)="goToDetails(arena.idName)">
+            <ion-card-content text-center>
+              <h2>{{arena.name}}</h2>
+
+              <ion-thumbnail item-start>
+                <img src="http://www.clashapi.xyz/images/arenas/{{arena.idName}}.png" alt="">
+              </ion-thumbnail>
+
+              <div float-right>
+                <p class="arena-text">Mínimo de Troféus</p>
+                <img src="assets/imgs/trophy.png" alt="" class="trophy-img">
+                <span>{{arena.minTrophies}}+</span>
+              </div>
+
+              <span class="separator"></span>
+
+              <div float-left>
+                <p class="arena-text">Ouro por Vitória</p>
+                <img src="assets/imgs/gold.png" alt="" class="trophy-img">
+                <span>{{arena.victoryGold}}</span>
+              </div>
+
+            </ion-card-content>
+          </ion-card>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-list>
+</ion-content>

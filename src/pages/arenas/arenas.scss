@@ -1,0 +1,56 @@
+page-arenas {
+  .col, .grid {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .card {
+    display: flex;
+    width: 92%;
+    margin: 5% 0 0 5%;
+  }
+
+  .card-content {
+    width: 100%;
+    margin: auto;
+  }
+
+  .list-header {
+    font-size: 1.3em;
+  }
+
+  .trophy-img {
+    display: inline !important;
+    width: 25px !important;
+    height: 25px !important;
+    margin-top: 5%;
+  }
+
+  .arena-text {
+    margin-top: 5%;
+  }
+
+  .separator {
+    border-right: 1px solid #d5d5d5;
+    position: absolute;
+    height: 65px;
+    left: 48%;
+    margin-top: 3%;
+  }
+
+  h2 {
+    font-size: 1.5em !important;
+    font-weight: bold;
+    margin-bottom: 5% !important;
+  }
+
+  span {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  img {
+    width: 150px !important;
+    margin: auto;
+  }
+}

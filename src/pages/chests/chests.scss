@@ -1,0 +1,25 @@
+page-chests {
+  .col, .grid {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .card {
+    display: flex;
+    height: 170px;
+    width: 92%;
+    margin: 5% 0 0 5%;
+  }
+
+  .card-content {
+    margin: auto;
+  }
+
+  .list-header {
+    font-size: 1.3em;
+  }
+
+  p {
+    font-size: 1.2em !important;
+  }
+}

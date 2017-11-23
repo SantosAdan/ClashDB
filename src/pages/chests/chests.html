@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>ClashDB</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-padding>
+  <ion-list no-lines>
+    <ion-list-header text-center>
+      Baús / Recompensas
+    </ion-list-header>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col col-4 *ngFor="let chest of chests">
+
+          <ion-card>
+            <ion-card-content text-center>
+
+              <ion-thumbnail item-start>
+                <img src="http://www.clashapi.xyz/images/chests/{{chest.idName}}.png" alt="">
+              </ion-thumbnail>
+
+              <p>{{chest.name}}</p>
+
+            </ion-card-content>
+          </ion-card>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-list>
+</ion-content>

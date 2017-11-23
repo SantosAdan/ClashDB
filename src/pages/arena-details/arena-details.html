@@ -1,0 +1,78 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>ClashDB</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-padding>
+
+  <ion-card *ngIf="arena">
+    <ion-card-content>
+
+      <ion-thumbnail>
+        <img class="fix-img" src="http://www.clashapi.xyz/images/arenas/{{arena.idName}}.png" alt="{{arena.name}}">
+      </ion-thumbnail>
+
+      <!--<ion-list>-->
+        <!--<ion-item>-->
+          <!--<ion-thumbnail item-end>-->
+            <!--<img src="assets/imgs/trophy.png" class="trophy-img">-->
+          <!--</ion-thumbnail>-->
+          <!--Troféus necessários {{ arena.minTrophies }}+-->
+        <!--</ion-item>-->
+      <!--</ion-list>-->
+
+      <ion-grid>
+        <ion-row>
+          <ion-col col-12 text-center>
+            <h2>{{ arena.name }}</h2>
+            <hr>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col col-6 text-left>
+            <p>Troféus</p>
+            <p>Ouro por Vitória</p>
+          </ion-col>
+
+          <ion-col col-6 text-right>
+            <p>
+              {{ arena.minTrophies }}+
+              <img src="assets/imgs/trophy.png" alt="" class="trophy-img">
+            </p>
+            <p>
+              {{ arena.victoryGold }}
+              <img src="assets/imgs/gold.png" alt="" class="trophy-img">
+            </p>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col col-12 text-justify>
+            <!--<p>{{ card.description }}</p>-->
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="arena && arena.cardUnlocks">
+    <ion-card-header>Cartas Desbloqueadas</ion-card-header>
+
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-3 *ngFor="let card of cards">
+            <img class="fix-padding" src="http://www.clashapi.xyz/images/cards/{{card.idName}}.png" (click)="goToCardDetails(card.idName)">
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

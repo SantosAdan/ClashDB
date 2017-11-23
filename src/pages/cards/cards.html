@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>ClashDB</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-padding>
+  <ion-list no-lines>
+    <ion-list-header text-center>
+      Cartas / Unidades
+    </ion-list-header>
+
+    <div text-center>
+      <p>Ordenar por:</p>
+      <button ion-button round small (click)="orderBy('name')" [disabled]="selected == 'name'">Alfabética</button>
+      <button ion-button round small (click)="orderBy('arena')" [disabled]="selected == 'arena'">Arena</button>
+      <button ion-button round small (click)="orderBy('elixirCost')" [disabled]="selected == 'elixirCost'">Elixir
+      </button>
+      <button ion-button round small (click)="orderBy('rarity')" [disabled]="selected == 'rarity'">Raridade</button>
+    </div>
+
+
+    <ion-grid>
+      <ion-row>
+        <ion-col col-4 *ngFor="let card of cards">
+
+          <ion-card (click)="goToDetails(card.idName)">
+            <ion-card-content text-center>
+              <p>
+                {{card.name}}
+
+              </p>
+
+              <ion-thumbnail item-start>
+                <img src="http://www.clashapi.xyz/images/cards/{{card.idName}}.png" alt="">
+              </ion-thumbnail>
+
+              <span class="selected-icon">
+                <ion-badge color="clash-elixir-dark" float-right>{{card.elixirCost}}</ion-badge>
+              </span>
+
+              <div text-center>
+                <ion-badge class="fix-badge" color="secondary">{{card.type}}</ion-badge>
+                <ion-badge class="fix-badge" color="primary">{{card.rarity}}</ion-badge>
+              </div>
+            </ion-card-content>
+          </ion-card>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-list>
+</ion-content>

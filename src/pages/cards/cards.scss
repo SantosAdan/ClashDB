@@ -1,0 +1,40 @@
+page-cards {
+  .col, .grid {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .card {
+    display: flex;
+    height: 230px;
+    width: 92%;
+    margin: 5% 0 0 5%;
+  }
+
+  .card-content {
+    //width: 100%;
+    margin: auto;
+  }
+
+  .fix-badge {
+    display: block !important;
+    margin-bottom: 5%;
+    margin-top: 5%;
+  }
+
+  .selected-icon {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: #000;
+    z-index: 9999 !important;
+  }
+
+  .list-header {
+    font-size: 1.3em;
+  }
+
+  p {
+    font-size: 1.2em !important;
+  }
+}
